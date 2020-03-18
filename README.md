@@ -12,4 +12,4 @@ Core Dependencies:
 
 ## Demonstração de funcionamento
 
-![Demonstração](readme/screenshot/demonstracao.gif)
+<img src="/readme/screenshot/demonstracao.gif" width="200" height="400" /> 
