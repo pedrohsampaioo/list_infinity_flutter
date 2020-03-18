@@ -28,11 +28,12 @@ class _HomePageState extends State<HomePage> {
     super.dispose();
   }
 
-  _handleScroll() {
+  _handleScroll() async {
     print("scroll: " + _scrollController.offset.toString());
     print("max: " + _scrollController.position.maxScrollExtent.toString());
     if (_scrollController.offset ==
-        _scrollController.position.maxScrollExtent) {
+            _scrollController.position.maxScrollExtent &&
+        _blocInfinitePost.state is PostLoaded) {
       _blocInfinitePost.add(PostFetch(initial: 0, amount: 5));
     }
   }
@@ -61,7 +62,10 @@ class _HomePageState extends State<HomePage> {
               maxHeight = MediaQuery.of(context).size.height;
               if (_handleLoading && index == _listPost.length) {
                 return Center(
-                  child: CircularProgressIndicator(),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: CircularProgressIndicator(),
+                  ),
                 );
               } else {
                 return ListTile(

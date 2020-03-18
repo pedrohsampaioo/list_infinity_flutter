@@ -14,6 +14,7 @@ class PostRepositoryIMPL implements PostRepository {
   @override
   Future<List<Post>> fetch(int initial, int amount) async {
     try {
+      await Future.delayed(Duration(seconds: 3));
       final result = await client.get(
           "https://jsonplaceholder.typicode.com/posts?_start=$initial&_limit=$amount");
       List<Post> listPost = <Post>[];
