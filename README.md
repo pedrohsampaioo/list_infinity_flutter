@@ -4,10 +4,10 @@ Faz requisições de API e renderiza das respostas sempre ao chegar no final do 
 
 Core Dependencies: 
 
-*Dio: https://pub.dev/packages/dio (requisições HTTP)
-*Equatable: https://pub.dev/packages/equatable
-*Flutter bloc: https://pub.dev/packages/flutter_bloc (gerenciamento de estado)
-*Modular: https://pub.dev/packages/flutter_modular (injeção de dependências e manuseio de rotas)
+* Dio: https://pub.dev/packages/dio (requisições HTTP)
+* Equatable: https://pub.dev/packages/equatable
+* Flutter bloc: https://pub.dev/packages/flutter_bloc (gerenciamento de estado)
+* Modular: https://pub.dev/packages/flutter_modular (injeção de dependências e manuseio de rotas)
 
 
 ## Demonstração de funcionamento
